@@ -5,7 +5,34 @@ Content-Type: application/json
 
 {
   "name":"walk dog",
-  "isComplete"=true
+  "isComplete":true
+}
+
+###
+
+@id=0
+DELETE {{TodoApi_HostAddress}}/todoitems/1{{id}}
+
+###
+
+GET {{TodoApi_HostAddress}}/todoitems
+
+###
+
+GET {{TodoApi_HostAddress}}/todoitems/complete
+
+###
+
+GET {{TodoApi_HostAddress}}/todoitems/{{id}}
+
+###
+
+PUT {{TodoApi_HostAddress}}/todoitems/2
+Content-Type: application/json
+
+{
+  "name":"walk dog",
+  "isComplete":false
 }
 
 ###
